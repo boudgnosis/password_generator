@@ -17,8 +17,12 @@ def generator_random_password(pwd_len):
         str: returns a text string with different characters and digits that
             make up the password.
     """
+    pwd = ''
+
     for i in range(pwd_len):
-        print(secrets.choice(ALL_CHARACTERS), end='')
+        pwd += "".join(secrets.choice(ALL_CHARACTERS))
+
+    return pwd
 
 
-generator_random_password(pwd_len)
+print(generator_random_password(pwd_len))
