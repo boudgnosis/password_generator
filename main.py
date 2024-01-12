@@ -1,9 +1,9 @@
 import string
 import secrets
 
-pwd_len = int(input('Please enter the password length do you want: '))
-
 ALL_CHARACTERS = string.ascii_letters + string.digits + string.punctuation
+
+pwd_len = int(input('Please enter the password length do you want: '))
 
 
 def generator_random_password(pwd_len):
@@ -22,7 +22,7 @@ def generator_random_password(pwd_len):
     for i in range(pwd_len):
         pwd += "".join(secrets.choice(ALL_CHARACTERS))
 
-    return pwd
+    print(pwd)
 
 
-print(generator_random_password(pwd_len))
+generator_random_password(pwd_len)
